@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie List</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'movies/style.css' %}">
+</head>
+<body>
+    <h1>Movie List</h1>
+    
+    <ul>
+        {% for movie in movies %}
+        <li><a href="{% url 'movie_detail' movie.id %}">{{ movie.title }} - {{ movie.release_year }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html> 
+
+
+
+{% comment %} <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Movie List</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Movie List</h1>
+    <ul>
+    {% for movie in movies %}
+        <li>{{ movie.title }} - {{ movie.release_year }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html> {% endcomment %}

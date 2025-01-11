@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie List</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'movies/style.css' %}">
+</head>
+<body>
+    <h1>Movie List</h1>
+    <ul>
+        {% for movie in movies %}
+        <li>{{ movie.title }} - {{ movie.release_year }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
