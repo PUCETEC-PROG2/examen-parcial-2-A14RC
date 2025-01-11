@@ -1,23 +1,28 @@
-{% comment %} <!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Movie Detail</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'movies/style.css' %}">
 </head>
 <body>
-    <h1>{{ movie.title }}</h1>
+    <h1>{{ movie.title }} ({{ movie.release_year }})</h1>
     <p><strong>Genre:</strong> {{ movie.genre }}</p>
     <p><strong>Director:</strong> {{ movie.director }}</p>
-    <p><strong>Release Year:</strong> {{ movie.release_year }}</p>
     <p><strong>Synopsis:</strong> {{ movie.synopsis }}</p>
-    <a href="{% url 'index' %}">Back to List</a>
+    <a href="{% url 'index' %}">Back to Movie List</a>
 </body>
-</html> {% endcomment %}
+</html>
 
 
 
-<!DOCTYPE html>
+
+
+
+
+
+
+{% comment %} <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,5 +38,5 @@
     <p><strong>Synopsis:</strong> {{ movie.synopsis }}</p>
     <a href="{% url 'index' %}">Back to List</a>
 </body>
-</html>
+</html> {% endcomment %}
 
